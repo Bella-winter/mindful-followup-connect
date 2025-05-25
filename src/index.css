@@ -14,7 +14,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 158 64% 52%;
+    --primary: 200 100% 45%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 210 40% 96.1%;
@@ -31,7 +31,7 @@
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 158 64% 52%;
+    --ring: 200 100% 45%;
 
     --radius: 0.5rem;
 
@@ -44,45 +44,46 @@
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
 
-    /* New color scheme */
+    --healthcare-blue: 200 100% 45%;
+    --healthcare-green: 142 76% 36%;
+    --healthcare-light-blue: 200 100% 95%;
+    --healthcare-light-green: 142 76% 95%;
+
+    /* Dark theme colors */
     --charcoal-black: 210 11% 15%;
-    --emerald-green: 158 64% 52%;
     --teal-cyan: 180 100% 50%;
-    --light-grey: 210 11% 71%;
-    --flash-green: 120 100% 50%;
-    --error-red: 0 84% 60%;
     --dark-card: 210 11% 10%;
     --dark-border: 210 11% 25%;
   }
 
   .dark {
     --background: var(--charcoal-black);
-    --foreground: var(--light-grey);
+    --foreground: var(--teal-cyan);
     --card: var(--dark-card);
-    --card-foreground: var(--light-grey);
+    --card-foreground: var(--teal-cyan);
     --popover: var(--dark-card);
-    --popover-foreground: var(--light-grey);
-    --primary: var(--emerald-green);
+    --popover-foreground: var(--teal-cyan);
+    --primary: var(--teal-cyan);
     --primary-foreground: var(--charcoal-black);
     --secondary: 210 11% 20%;
-    --secondary-foreground: var(--light-grey);
+    --secondary-foreground: var(--teal-cyan);
     --muted: 210 11% 20%;
-    --muted-foreground: 210 11% 60%;
+    --muted-foreground: 180 50% 70%;
     --accent: 210 11% 20%;
-    --accent-foreground: var(--light-grey);
-    --destructive: var(--error-red);
-    --destructive-foreground: 0 0% 98%;
+    --accent-foreground: var(--teal-cyan);
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
     --border: var(--dark-border);
     --input: var(--dark-border);
-    --ring: var(--emerald-green);
+    --ring: var(--teal-cyan);
     --sidebar-background: var(--charcoal-black);
-    --sidebar-foreground: var(--light-grey);
-    --sidebar-primary: var(--emerald-green);
+    --sidebar-foreground: var(--teal-cyan);
+    --sidebar-primary: var(--teal-cyan);
     --sidebar-primary-foreground: var(--charcoal-black);
     --sidebar-accent: 210 11% 20%;
-    --sidebar-accent-foreground: var(--light-grey);
+    --sidebar-accent-foreground: var(--teal-cyan);
     --sidebar-border: var(--dark-border);
-    --sidebar-ring: var(--emerald-green);
+    --sidebar-ring: var(--teal-cyan);
   }
 }
 
@@ -95,20 +96,20 @@
     @apply bg-background text-foreground;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
     background-color: hsl(var(--charcoal-black));
-    color: hsl(var(--light-grey));
+    color: hsl(var(--teal-cyan));
   }
 }
 
 @layer utilities {
   .healthcare-gradient {
-    background: linear-gradient(135deg, hsl(var(--emerald-green)) 0%, hsl(var(--teal-cyan)) 100%);
+    background: linear-gradient(135deg, hsl(var(--teal-cyan)) 0%, hsl(var(--healthcare-green)) 100%);
   }
   
   .healthcare-card {
     @apply bg-card border border-border rounded-xl shadow-sm hover:shadow-md transition-all duration-300;
     background-color: hsl(var(--dark-card));
     border-color: hsl(var(--dark-border));
-    color: hsl(var(--light-grey));
+    color: hsl(var(--teal-cyan));
   }
   
   .healthcare-button {
@@ -121,20 +122,8 @@
     background-color: hsl(180 100% 45%);
   }
 
-  .success-alert {
-    background-color: hsl(var(--flash-green) / 0.1);
-    border-color: hsl(var(--flash-green));
-    color: hsl(var(--flash-green));
-  }
-
-  .error-alert {
-    background-color: hsl(var(--error-red) / 0.1);
-    border-color: hsl(var(--error-red));
-    color: hsl(var(--error-red));
-  }
-
   .dark-theme {
     background-color: hsl(var(--charcoal-black));
-    color: hsl(var(--light-grey));
+    color: hsl(var(--teal-cyan));
   }
 }
