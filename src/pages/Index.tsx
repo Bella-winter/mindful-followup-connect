@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import Navigation from '@/components/Navigation';
 import Dashboard from '@/components/Dashboard';
@@ -33,7 +32,7 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
+    <div className="min-h-screen dark-theme">
       <Navigation currentSection={currentSection} onSectionChange={setCurrentSection} />
       {renderContent()}
     </div>
@@ -42,38 +41,38 @@ const Index = () => {
 
 const ComplianceSection = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50 p-6">
+    <div className="min-h-screen dark-theme p-6">
       <div className="max-w-7xl mx-auto">
         <div className="mb-8">
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">Privacy & Compliance</h1>
-          <p className="text-gray-600">HIPAA compliance and data security management</p>
+          <h1 className="text-3xl font-bold mb-2" style={{ color: 'hsl(var(--teal-cyan))' }}>Privacy & Compliance</h1>
+          <p className="text-teal-300">HIPAA compliance and data security management</p>
         </div>
 
         <div className="grid gap-6">
           <Card className="healthcare-card">
             <CardHeader>
               <div className="flex items-center space-x-2">
-                <Shield className="w-6 h-6 text-green-600" />
-                <CardTitle>Security Status</CardTitle>
+                <Shield className="w-6 h-6" style={{ color: 'hsl(var(--teal-cyan))' }} />
+                <CardTitle style={{ color: 'hsl(var(--teal-cyan))' }}>Security Status</CardTitle>
               </div>
-              <CardDescription>Current security and compliance status</CardDescription>
+              <CardDescription className="text-teal-300">Current security and compliance status</CardDescription>
             </CardHeader>
             <CardContent>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div className="text-center p-4 bg-green-50 rounded-lg">
-                  <Badge className="bg-green-100 text-green-800 mb-2">Active</Badge>
-                  <h3 className="font-medium">HIPAA Compliance</h3>
-                  <p className="text-sm text-gray-600 mt-1">All patient data encrypted and secure</p>
+                <div className="text-center p-4 bg-gray-800 rounded-lg border border-gray-700">
+                  <Badge className="bg-teal-600 text-white mb-2">Active</Badge>
+                  <h3 className="font-medium" style={{ color: 'hsl(var(--teal-cyan))' }}>HIPAA Compliance</h3>
+                  <p className="text-sm text-teal-300 mt-1">All patient data encrypted and secure</p>
                 </div>
-                <div className="text-center p-4 bg-blue-50 rounded-lg">
-                  <Badge className="bg-blue-100 text-blue-800 mb-2">Enabled</Badge>
-                  <h3 className="font-medium">Data Encryption</h3>
-                  <p className="text-sm text-gray-600 mt-1">AES-256 encryption at rest and in transit</p>
+                <div className="text-center p-4 bg-gray-800 rounded-lg border border-gray-700">
+                  <Badge className="bg-cyan-600 text-white mb-2">Enabled</Badge>
+                  <h3 className="font-medium" style={{ color: 'hsl(var(--teal-cyan))' }}>Data Encryption</h3>
+                  <p className="text-sm text-teal-300 mt-1">AES-256 encryption at rest and in transit</p>
                 </div>
-                <div className="text-center p-4 bg-purple-50 rounded-lg">
-                  <Badge className="bg-purple-100 text-purple-800 mb-2">Protected</Badge>
-                  <h3 className="font-medium">Access Control</h3>
-                  <p className="text-sm text-gray-600 mt-1">Role-based permissions and audit logs</p>
+                <div className="text-center p-4 bg-gray-800 rounded-lg border border-gray-700">
+                  <Badge className="bg-teal-700 text-white mb-2">Protected</Badge>
+                  <h3 className="font-medium" style={{ color: 'hsl(var(--teal-cyan))' }}>Access Control</h3>
+                  <p className="text-sm text-teal-300 mt-1">Role-based permissions and audit logs</p>
                 </div>
               </div>
             </CardContent>
@@ -151,11 +150,11 @@ const ComplianceSection = () => {
 
 const SettingsSection = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50 p-6">
+    <div className="min-h-screen dark-theme p-6">
       <div className="max-w-7xl mx-auto">
         <div className="mb-8">
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">System Settings</h1>
-          <p className="text-gray-600">Configure your reminder system and integrations</p>
+          <h1 className="text-3xl font-bold mb-2" style={{ color: 'hsl(var(--teal-cyan))' }}>System Settings</h1>
+          <p className="text-teal-300">Configure your reminder system and integrations</p>
         </div>
 
         <div className="grid gap-6">
