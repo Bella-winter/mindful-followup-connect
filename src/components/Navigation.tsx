@@ -38,8 +38,8 @@ const Navigation: React.FC<NavigationProps> = ({ currentSection, onSectionChange
                       : 'hover:bg-gray-800'
                   }`}
                   style={{
-                    backgroundColor: isActive ? 'hsl(var(--teal-cyan))' : 'transparent',
-                    color: isActive ? 'hsl(var(--charcoal-black))' : 'hsl(var(--teal-cyan))'
+                    backgroundColor: isActive ? 'hsl(var(--emerald-green))' : 'transparent',
+                    color: isActive ? 'hsl(var(--charcoal-black))' : 'hsl(var(--light-grey))'
                   }}
                   onClick={() => onSectionChange(item.id)}
                 >
@@ -52,10 +52,10 @@ const Navigation: React.FC<NavigationProps> = ({ currentSection, onSectionChange
           
           <div className="flex items-center space-x-3">
             <div className="text-right">
-              <p className="text-sm font-medium" style={{ color: 'hsl(var(--teal-cyan))' }}>Dr. Alex Thompson</p>
-              <p className="text-xs text-teal-300">Cardiology Clinic</p>
+              <p className="text-sm font-medium" style={{ color: 'hsl(var(--light-grey))' }}>Dr. Alex Thompson</p>
+              <p className="text-xs" style={{ color: 'hsl(var(--light-grey) / 0.7)' }}>Cardiology Clinic</p>
             </div>
-            <div className="w-10 h-10 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-semibold">
+            <div className="w-10 h-10 rounded-full flex items-center justify-center text-white font-semibold" style={{ background: 'linear-gradient(135deg, hsl(var(--emerald-green)), hsl(var(--teal-cyan)))' }}>
               AT
             </div>
           </div>
