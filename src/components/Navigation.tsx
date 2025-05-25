@@ -20,7 +20,7 @@ const Navigation: React.FC<NavigationProps> = ({ currentSection, onSectionChange
   ];
 
   return (
-    <div className="w-full border-b shadow-sm" style={{ backgroundColor: 'hsl(var(--charcoal-black))', borderColor: 'hsl(var(--dark-border))' }}>
+    <div className="w-full bg-white border-b border-gray-100 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between py-4">
           <div className="flex space-x-1">
@@ -34,13 +34,9 @@ const Navigation: React.FC<NavigationProps> = ({ currentSection, onSectionChange
                   variant={isActive ? "default" : "ghost"}
                   className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-200 ${
                     isActive 
-                      ? 'shadow-md' 
-                      : 'hover:bg-gray-800'
+                      ? 'bg-blue-600 text-white shadow-md' 
+                      : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
                   }`}
-                  style={{
-                    backgroundColor: isActive ? 'hsl(var(--teal-cyan))' : 'transparent',
-                    color: isActive ? 'hsl(var(--charcoal-black))' : 'hsl(var(--teal-cyan))'
-                  }}
                   onClick={() => onSectionChange(item.id)}
                 >
                   <Icon className="w-4 h-4" />
@@ -52,10 +48,10 @@ const Navigation: React.FC<NavigationProps> = ({ currentSection, onSectionChange
           
           <div className="flex items-center space-x-3">
             <div className="text-right">
-              <p className="text-sm font-medium" style={{ color: 'hsl(var(--teal-cyan))' }}>Dr. Alex Thompson</p>
-              <p className="text-xs text-teal-300">Cardiology Clinic</p>
+              <p className="text-sm font-medium text-gray-900">Dr. Alex Thompson</p>
+              <p className="text-xs text-gray-600">Cardiology Clinic</p>
             </div>
-            <div className="w-10 h-10 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-semibold">
+            <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-green-500 rounded-full flex items-center justify-center text-white font-semibold">
               AT
             </div>
           </div>
